@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name article:</strong>
+  <%= @data_basis.name_article %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @data_basis.description %>
+</p>
+
+<p>
+  <strong>Auteurs:</strong>
+  <%= @data_basis.auteurs %>
+</p>
+
+<p>
+  <strong>Date pub:</strong>
+  <%= @data_basis.date_pub %>
+</p>
+
+<p>
+  <strong>Categorie:</strong>
+  <%= @data_basis.categorie %>
+</p>
+
+<%= link_to 'Edit', edit_data_basis_path(@data_basis) %> |
+<%= link_to 'Back', data_bases_path %>

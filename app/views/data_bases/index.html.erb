@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data Bases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name article</th>
+      <th>Description</th>
+      <th>Auteurs</th>
+      <th>Date pub</th>
+      <th>Categorie</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_bases.each do |data_basis| %>
+      <tr>
+        <td><%= data_basis.name_article %></td>
+        <td><%= data_basis.description %></td>
+        <td><%= data_basis.auteurs %></td>
+        <td><%= data_basis.date_pub %></td>
+        <td><%= data_basis.categorie %></td>
+        <td><%= link_to 'Show', data_basis %></td>
+        <td><%= link_to 'Edit', edit_data_basis_path(data_basis) %></td>
+        <td><%= link_to 'Destroy', data_basis, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Data Basis', new_data_basis_path %>

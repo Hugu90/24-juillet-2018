@@ -1,0 +1,42 @@
+<%= form_with(model: data_basis, local: true) do |form| %>
+  <% if data_basis.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(data_basis.errors.count, "error") %> prohibited this data_basis from being saved:</h2>
+
+      <ul>
+      <% data_basis.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name_article %>
+    <%= form.text_field :name_article %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :auteurs %>
+    <%= form.text_field :auteurs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_pub %>
+    <%= form.number_field :date_pub %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categorie %>
+    <%= form.text_field :categorie %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
